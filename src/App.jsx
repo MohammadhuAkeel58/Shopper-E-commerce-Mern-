@@ -13,16 +13,16 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" component={<Shop />} />
-          <Route path="/mens" component={<ShopCategory category="men" />} />
-          <Route path="/womens" component={<ShopCategory category="women" />} />
-          <Route path="/kids" component={<ShopCategory category="kid" />} />
+          <Route path="/" element={<Shop />} />
+          <Route path="/mens" element={<ShopCategory category="men" />} />
+          <Route path="/womens" element={<ShopCategory category="women" />} />
+          <Route path="/kids" element={<ShopCategory category="kid" />} />
 
-          <Route path="/product" component={<Product />}>
-            <Route path=":productId" component={<Product />} />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
           </Route>
-          <Route path="/cart" component={<Cart />} />
-          <Route path="/login" component={<LoginSignup />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginSignup />} />
         </Routes>
       </BrowserRouter>
     </div>
